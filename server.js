@@ -15,6 +15,8 @@ var writeRequestHandler = function writeRequestHandler(data, offset, withoutResp
     console.log("wirteRequest is recieved");
     console.log(data.toString('UTF-8'));
     
+    this.data = data;
+
     if(!withoutResponse){
 	var result = bleno.Characteristic.RESULT_SUCCESS;
 	callback(result);
